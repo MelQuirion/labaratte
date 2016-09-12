@@ -1,0 +1,1354 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: normal;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+h2 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    line-height: 3.8rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*************************
+        HEADER
+*************************/
+header .logo {
+    float: left;
+    margin-right: 2.1rem;
+}
+
+#menus {
+    float: left;
+    margin-top: 1.2rem;
+    width: 74.2%;
+}
+
+
+#menu-membre {
+    float: right;
+    clear: left;
+    margin-bottom: 2rem;
+}
+
+#menu-membre li:first-child {
+    padding-right: 1.5rem;
+    border-right: 1px solid #339933;  
+    line-height: .2rem;
+}
+
+#menu-membre li:nth-child(2) {
+    padding-left: 1.5rem;
+}
+
+
+#menu-membre a, #menu-membre a:visited {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #339933;
+}
+
+#menu-membre a:hover {
+    color: #cc3333;
+    transition: color 0.3s;
+}
+
+#menu-membre #panier {
+    border: none;
+    margin-top: -.4rem;
+}
+
+nav {
+    clear: both;
+}
+
+nav li {
+    text-align: center;
+}   
+
+nav li:first-child {
+    width: 14.82%;
+}
+
+nav li:nth-child(2) {
+    width: 19.7%;
+}
+
+nav li:nth-child(3) {
+    width: 16.04%;
+}
+
+nav li:nth-child(4) {
+    width: 15.4%;
+}
+
+header nav li a:hover, header nav li a[href="#"] {
+    font-weight: bold;
+    color: #cc3333;
+}
+
+nav li:last-child, nav li:nth-last-child(2) {
+    padding: 0;
+    width: 5.7%;
+    text-align: right;
+}
+
+nav li:last-child a, nav li:nth-last-child(2) a {
+    line-height: 0;
+}
+
+nav li:last-child img, nav li:nth-last-child(2) img {
+    margin-top: .1rem; 
+}
+
+nav li a, nav li a:visited {
+    color: #999999;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 3.6rem;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+
+nav .sous-menu {
+    display: none;
+    width: 17%;
+    padding: .5rem;
+    border: 2px solid #cc3333;
+    border-radius: 3px;
+}
+
+nav .sous-menu li {
+    float: none;
+    width: auto;
+    text-align: center;
+}
+
+nav .sous-menu li a {
+    line-height: 4rem;
+}
+
+nav li:hover ul {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+}
+
+nav li:hover ul li {
+    font-size: 1.6rem;
+    display: block;
+}
+
+/*FAIRE UN DON*/
+header nav .don {
+    width: 22.64%;  
+    color: #fff; 
+}
+
+header nav .don a {
+    display: inline-block;
+    background-color: #cc3333;
+    padding: .9rem .8rem .5rem;
+    line-height: 1.8rem;
+    border-radius: 3px;
+    color: #fff; 
+}
+
+header nav .don a:hover {
+    font-weight: normal;
+    color: #fff;
+}
+/*FIN FAIRE UN DON*/
+
+/*******************
+    CONNEXION
+********************/
+.overlay {
+    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.8);
+}
+
+#popUpLogin {
+    position: absolute;
+    width: 59rem;
+    height: 37rem;
+    background: #FFF;
+    padding: 0 8rem;
+    border: 3px solid #339933;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+#popUpLogin h2 {
+    font-size: 3.8rem;
+    color: #339933;
+    margin: 3rem 0 3rem;
+    text-align: center;
+}
+
+#popUpLogin #errLogin {
+    display: block;
+    visibility: hidden;
+    color: #c62323;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#popUpLogin input[type="email"], #popUpLogin input[type="password"] {
+    width: 61.32%;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: .5rem .5rem .3rem;
+    margin-bottom: 5rem;
+    float: right;
+    font-size: 1.8rem;
+}
+
+#popUpLogin label {
+    font-size: 2.4rem;
+    width: 36.56%;
+    display: block;
+    float: left;
+}
+
+#popUpLogin #btnFermer {
+    position: absolute;
+    top: 1rem;
+    right: .5rem;
+    border: none;
+    background-color: #fff;
+    font-size: 2.4rem;
+}
+
+#popUpLogin #btnConnexion {
+    float: right;
+    margin: 0 0 3rem;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 1rem 4rem .6rem;
+    background-color: #339933;
+    font-size: 2.4rem;
+}
+
+.option_animation {
+    animation-delay: 2s;
+}
+
+
+/*******************
+        PUB
+********************/
+#pub {
+    height: 6.5rem;
+    margin: 2rem 0;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+#pub * {
+    position: relative;
+}
+
+#pub #fleche {
+    margin-top: -5.5rem;
+    transform: scale(0);
+}
+
+#pub p {
+    color: #ff6600;
+    font-size: 2rem;
+    margin: 0;
+    display: inline-block;
+}
+
+#pub p, #pub img {
+    float: left;
+}
+
+#pub img {
+    margin: 0 .5rem;
+}
+
+#texte-gauche {
+    left: -100%; 
+    width: 50%;
+}
+
+#main {
+    opacity: 0;
+}
+
+#texte-droite {
+    left: -82%; 
+    margin-top: 1rem;
+    width: 50%;
+}
+
+#coeur {
+    opacity: 0;
+}
+
+#pause {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+/*************************
+        PRÉSENTATION
+*************************/
+#presentation {
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center 20%;
+    color: #fff;
+    padding: 5.5rem 0 3.3rem;
+}
+
+#presentation h2 {
+    line-height: 3.8rem;
+}
+
+#presentation p {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    margin: 4.5rem 0 2.5rem;
+    width: 59.5%;
+}
+
+#presentation a, #presentation a:visited {
+    color: #fff;
+    font-size: 1.6rem;
+    background-color: #cc3333;
+    padding: .8rem 1rem;
+    border-radius: 3px;
+}
+
+
+/********************
+        METS
+********************/
+#mets {
+    padding: 4.4rem 0 3.2rem;
+    text-align: center; /*pour centrer bouton Commander*/
+}
+
+hr {
+    color: #ccc;
+    width: 15%;
+    margin: 3.8rem auto 0;
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+}
+#mets h2 {
+    color: #339933;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+#mets img {
+    float: left;
+    margin-bottom: 4.5rem;
+}
+
+#mets .img-centre {
+    margin: 0 2rem;
+}
+
+#mets a {
+    border-radius: 3px;
+    color: #fff;
+    padding: 1rem 3.2rem .6rem;
+    background-color: #339933;
+    font-size: 2.4rem;
+}
+
+/************************
+    ACCUEIL-COMPTOIRS
+************************/
+#accueil-comptoirs {
+    text-align: center;
+}
+
+#accueil-comptoirs h2 {
+    color: #cc3333;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+#accueil-comptoirs img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 4.6rem;
+}
+
+#accueil-comptoirs a {
+    border-radius: 3px;
+    color: #fff;
+    padding: 1rem 1.6rem .6rem;
+    background-color: #be2b29;
+    font-size: 2.4rem;
+}
+
+
+
+/********************
+    INSCRIPTION
+********************/
+#inscription h2 {
+    color: #339933;
+    margin: 5rem 0 4.3rem;
+}
+
+#inscription form {
+    padding: 0 7.1rem 0 6.4rem;
+}
+
+#inscription form .row {
+    margin-bottom: 3rem;
+}
+
+#inscription label, #inscription input, #inscription select, #inscription span {
+    float: left;
+}
+
+#inscription label {
+    display: block;
+    width: 22.31%;
+    font-size: 1.8rem;
+    line-height: 3.1rem;
+}
+
+#inscription .champ label {
+    width: 44.62%;
+}
+
+#inscription span {
+    font-size: 1.8rem;
+    line-height: 3.1rem;
+}
+
+#inscription input, #inscription select {
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: .5rem .5rem .3rem;
+    font-size: 1.6rem;
+    width: 24.36%; 
+}
+
+#inscription .champ select {
+    width: 48.54%;
+}
+
+#inscription input {
+    background-color: #fff;
+    border-color: #000;
+}
+
+#inscription .champ input {
+    width: 48.54%;
+}
+
+#inscription .champ {
+    width: 50%;
+    float: left;
+}
+
+#inscription .champ .col-droite {
+    margin-left: 4rem;
+    width: 37%;
+}
+
+#inscription #txtApp {
+    width: 11.6%;
+}
+
+#inscription #txtCp {
+    width: 18%;
+}
+
+#inscription #txtJour, #inscription #selMois, #inscription #txtEnfant {
+    width: 11.6%;
+}
+
+#inscription #selMois {
+    height: 3.1rem;
+}
+
+#inscription #txtAnnee {
+    width: 13%;
+}
+
+#inscription .spanDdn {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin: 0 .7rem;
+}
+
+#inscription .spanRb {
+    margin-right: 1.5rem;
+}
+
+#inscription input[type="radio"] {
+    width: 3%;
+    height: 3rem;
+}
+
+#inscription label[for="rbSexe"], #inscription label[for="rbAmerindien"], #inscription label[for="rbImmigrant"] {
+    width: auto;
+    margin-right: 1.5rem;
+}
+
+#inscription label[for="rbAmerindien"], #inscription label[for="rbImmigrant"] {
+    margin-left: 6.4rem;
+}
+
+#inscription #selFinanciere {
+    width: auto;
+}
+
+#inscription .button {
+    text-align: center;
+}
+
+#inscription input[type="submit"]
+{
+    margin-top: 1rem;
+    float: none;
+    width: auto;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 1rem 4rem .6rem;
+    background-color: #339933;
+    font-size: 2.4rem;
+}
+
+#inscription form img {
+    float: left;
+    vertical-align: top;
+    display: none;
+    margin-top: .4rem;
+    margin-left: .2rem;
+}
+
+#inscription form .erreur {
+    display: none;
+    position: absolute;
+    font-size: 1.2rem;
+    background-color: #c62323;
+    border: rgba(255,255,255,.1);
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 .8rem;
+    margin-left: -1rem;
+}
+
+/********************
+    METS-CONGELES
+********************/
+#mets-congeles h2 {
+    margin: 5rem 0 3.5rem;
+    color: #339933;
+}
+
+#mets-congeles .message {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#mets-congeles .message a {  
+    color: #c62323;
+    font-weight: bold;
+}
+
+
+#mets-congeles h3 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #339933;
+    text-transform: uppercase;
+}
+
+#mets-congeles .mets {
+    width: 23.03%;
+    float: left;
+    text-align: center;
+    margin: 0 1rem;
+}
+
+#mets-congeles .info-mets {
+    padding: 5.5rem 1rem;
+    color: #fff;
+    height: 23.5rem;
+}
+
+#mets-congeles .row {
+    margin: 0 -1rem 4rem -1rem;
+}
+
+
+#mets-congeles h4, #mets-congeles p {
+    font-size: 1.8rem;
+    margin: 0 0 2.5rem;
+    line-height: 1.8rem;
+}
+
+#mets-congeles p:last-child {
+    margin-bottom: 0;
+}
+
+#mets-congeles .mets form {
+    margin: 1rem 0 0;
+}
+
+#mets-congeles .mets input[type="text"] {
+    width: 27.66%;
+    height: 2.5rem;
+    margin : 0 2rem 1.5rem;
+    vertical-align: middle;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#mets-congeles .mets button, #mets-congeles .mets input[type='submit'] {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    text-align: center;
+    height: 2.6rem;
+    vertical-align: middle;
+}
+
+#mets-congeles .mets .btnMoins, #mets-congeles .mets .btnPlus {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.5rem;
+    width: 12%;
+    padding: 0;
+}
+
+#mets-congeles .bouton {
+    display: block;
+    text-align: center;
+    width: 19%;
+    margin: 5.5rem auto 0;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 1rem 0 .6rem;
+    background-color: #339933;
+    font-size: 2.4rem;
+}
+
+/********************
+        PANIER
+********************/
+#panier h2 {
+    margin: 5rem 0 3.5rem;
+    color: #339933; 
+}
+
+#panier h3 {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+}
+
+#panier .titre-panier {
+    margin-left: 58rem;
+}
+
+#panier .titre-panier p {
+    float: left;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 10rem;
+}
+
+#panier .titre-panier p:last-child {
+    margin-left: 3.5rem;
+}
+
+#panier .item {
+    font-size: 1.8rem;
+    border: 1px solid #999;
+    border-radius: 3px;
+    margin: 0 6.5rem 3rem;
+    padding: 2rem; 
+}
+
+#panier .item h3 {
+    margin-bottom: 1.5rem;
+}
+
+#panier .item p {
+    margin: 0;
+}
+
+#panier .item img {
+    float: left;
+    margin-right: 2.5rem;
+}
+
+#panier .nom-format {
+    float: left;
+    margin: 1.5rem; 
+    width: 39%;
+}
+
+#panier .item .prix {
+    float: left;
+    margin-top: 1.5rem;
+    width: 13.8%; 
+}
+
+#panier .item form {
+    float: right;
+    margin-top: 1.5rem; 
+    width: 20%;
+}
+
+#panier .item input[type="text"] {
+    width: 25.64%;
+    text-align: center;
+}
+
+#panier .item input[type="submit"] {
+    margin-top: 1rem;
+    width: 60%;
+}
+
+#panier a, #panier a:visited {
+    display: block;
+    float: right;
+    text-align: center;
+    width: 60%;
+    margin: 4.5rem 0 0;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 1rem 0 .6rem;
+    background-color: #339933;
+    font-size: 2.4rem;
+}
+
+#panier .total {
+    float: right;
+    margin-right: 6.5rem;
+    width: 32%;
+}
+
+#panier .total p {
+    float: left;
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+#panier .total span {
+    font-size: 1.8rem;
+}
+
+#panier .total p:last-child {
+    float: right;
+}
+
+/********************
+      SOMMAIRE
+********************/
+#sommaire h2 {
+    color: #339933;
+    margin: 5rem 0 3.5rem;  
+}
+
+#sommaire h3 {
+    margin-bottom: 3.7rem; 
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+}
+
+#sommaire form {
+    padding: 0 7.1rem 0 6.4rem;
+}
+
+#sommaire label, #sommaire input {
+    float: left;
+}
+
+#sommaire form img {
+    float: left;
+    vertical-align: top;
+    display: none;
+    margin-top: .4rem;
+    margin-left: .2rem;
+}
+
+#sommaire form .erreur {
+    display: none;
+    position: absolute;
+    font-size: 1.2rem;
+    background-color: #c62323;
+    border: rgba(255,255,255,.1);
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 .8rem;
+    margin-left: -1rem;
+}
+
+#sommaire .champ {
+    width: 50%;
+    float: left;
+}
+
+#sommaire label {
+    display: block;
+    width: 23.12%;
+    font-size: 1.8rem;
+    line-height: 3.1rem;
+}
+
+#sommaire .col-droite {
+    width: 30%;
+}
+
+#sommaire span {
+    font-size: 1.8rem;
+    line-height: 3.1rem;
+}
+
+#sommaire input {
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: .5rem .5rem .3rem;
+    font-size: 1.6rem;
+    width: 58.96%; 
+}
+
+#sommaire #txtApp, #sommaire #txtCp {
+    width: 18.5%;
+}
+
+#sommaire .row {
+    margin-bottom: 4.5rem; 
+}
+
+#sommaire ul {
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+#sommaire li {
+    text-align: center;
+}
+
+#sommaire li:first-child {
+    text-align: left;
+    width: 40%;
+}
+
+#sommaire li:nth-child(2) {
+    width: 17%;
+}
+
+#sommaire li:nth-child(3) {
+    width: 17%;
+}
+
+#sommaire li:last-child {
+    width: 17%;
+    text-align: right;
+    float: right;
+}
+
+#sommaire .item p {
+    float: left;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+#sommaire .item p:first-child {
+    text-align: left;
+    width: 40%;
+}
+
+#sommaire .item p:nth-child(2) {
+    width: 17%;
+}
+
+#sommaire .item p:nth-child(3) {
+    width: 17%;
+}
+
+#sommaire .item p:last-child {
+    float: right;
+    width: 17%;
+    text-align: right;
+}
+
+#sommaire hr {
+    width: 100%;
+    margin: 0;
+}
+
+#sommaire .total {
+    margin-top: 3rem;
+    float: right;
+    width: 32%;
+}
+
+#sommaire .total p {
+    float: left;
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+#sommaire .total p:last-child {
+    float: right;
+}
+
+#sommaire .total span {
+    font-size: 1.8rem;
+}
+
+#sommaire .total label {
+    width: auto;
+    margin: 4rem 0;
+}
+
+#sommaire #selPaiement {
+    float: right;
+    line-height: 3.1rem;
+    font-size: 1.8rem;
+    margin: 4rem 0;
+}
+
+#sommaire input[type="submit"], #sommaire #btnRetour
+{
+    margin-top: 1rem;
+    width: auto;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 1rem 4rem .6rem;
+    background-color: #339933;
+}
+
+#sommaire #bouton-bottom {
+    clear: both;
+}
+
+#sommaire #btnRetour {
+    float: left;
+    font-size: 1.8rem;
+    margin-top: .5rem;
+}
+
+#sommaire #btnConfirmer {
+    float: right;
+    font-size: 2.4rem;
+    margin: 0;
+}
+
+/********************
+    CONFIRMATION
+********************/
+#confirmation h2 {
+    color: #339933;
+    margin: 5rem 0 3.5rem;  
+}
+
+#confirmation h3 {
+    margin-bottom: 3.7rem; 
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+}
+
+#confirmation p {
+    font-size: 1.8rem;
+    line-height: 3.8rem;
+}
+
+#confirmation ul {
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+#confirmation li {
+    text-align: center;
+}
+
+#confirmation li:first-child {
+    text-align: left;
+    width: 40%;
+}
+
+#confirmation li:nth-child(2) {
+    width: 17%;
+}
+
+#confirmation li:nth-child(3) {
+    width: 17%;
+}
+
+#confirmation li:last-child {
+    width: 17%;
+    text-align: right;
+    float: right;
+}
+
+#confirmation .item p {
+    float: left;
+    text-align: center;
+    line-height: 2rem;
+}
+
+#confirmation .item p:first-child {
+    text-align: left;
+    width: 40%;
+}
+
+#confirmation .item p:nth-child(2) {
+    width: 17%;
+}
+
+#confirmation .item p:nth-child(3) {
+    width: 17%;
+}
+
+#confirmation .item p:last-child {
+    float: right;
+    width: 17%;
+    text-align: right;
+}
+
+#confirmation hr {
+    width: 100%;
+    margin: 0;
+}
+
+#confirmation .total {
+    margin-top: 3rem;
+    float: right;
+    width: 32%;
+}
+
+#confirmation .total p {
+    float: left;
+    font-size: 2.4rem;
+    margin: 0;
+    line-height: 2.6rem;
+}
+
+#confirmation .total p:last-child {
+    float: right;
+}
+
+#confirmation .total span {
+    font-size: 1.8rem;
+}
+
+#confirmation .total label {
+    width: auto;
+    margin: 4rem 0;
+}
+
+
+#confirmation a, #panier a:visited {
+    display: block;
+    float: right;
+    text-align: center;
+    width: 60%;
+    margin: 4.5rem 0 0;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 1rem 0 .6rem;
+    background-color: #339933;
+    font-size: 2.4rem;
+}
+/********************
+        DON
+********************/
+#don h2 {
+    color: #339933;
+    margin: 5rem 0 3.5rem;
+}
+
+#don h3 {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-left: 3.5rem;
+}
+
+#don h3 a, #don h3 a:visited, #don p a, #don p a:visited {
+    color: #cc3333;
+}
+
+#don p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 2rem 0 0 3.5rem; 
+}
+
+#don p:nth-last-child(2) {
+    font-weight: normal;
+    margin-bottom: 3.5rem;
+}
+
+#don p:last-child {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/************************
+        HISTORIQUE
+************************/
+#historique {
+    margin-top: 5rem; 
+}
+
+#historique h2 {
+    color: #339933;
+    margin: 0 0 3.5rem;
+}
+
+#historique h3 {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem 2rem;
+}
+
+#historique p {
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 0 0 2.2rem;
+}
+
+#historique .dernier {
+    margin-bottom: 5rem;
+}
+
+#historique p:last-child {
+    font-weight: bold;
+    margin-top: 4rem;
+}
+
+#historique a, #historique a:visited {
+    color: #cc3333;
+}
+
+
+/************************
+        CONTACT
+************************/
+
+#contact h2 {
+    margin: 5rem 0 3.5rem;
+    color: #339933;
+}
+
+#contact p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin: 0 0 2.2rem;
+}
+
+#map
+{
+    text-align: center;
+    width: 100%;
+    height: 400px;
+}
+
+#map h3 {
+    font-size: 2.4rem;
+    color: #339933;
+}
+
+#map p {
+    margin: 1rem 0;
+}
+
+#contact .comptoir {
+    width: 31.37%;
+    margin: 2.8rem 1rem 0;
+    float: left;
+}
+
+#contact .row {
+    text-align: center;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+#contact .comptoir h4 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin: 0;
+    color: #339933;
+}
+
+#contact .comptoir p {
+    margin: 0;
+    line-height: 2.4rem;
+}
+
+#contact .last {
+    margin-bottom: 3.5rem;
+}
+
+#contact a, #contact a:visited {
+    color: #cc3333;
+    font-weight: bold;
+}
+
+/************************
+    RÉINSERTION SOCIALE
+************************/
+#reinsertion h2 {
+    margin: 5rem 0 3.5rem;
+    color: #339933;
+}
+
+#reinsertion h3 {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin: 2.5rem 0 1.5rem 2rem;
+}
+
+#reinsertion p {
+    padding: 0 4rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 0 0 2.2rem;
+}
+
+#reinsertion li {
+    float: none;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    list-style-type: disc;
+    margin-bottom: 1rem;
+}
+
+#reinsertion ul {
+    margin: 0 0 2.2rem;
+    padding: 0 4rem 0 6.5rem;
+}
+
+/************************
+        MISSION
+************************/
+#mission h2 {
+    margin: 5rem 0 3.5rem;
+    color: #339933;
+}
+
+#mission h3 {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem 2rem;
+}
+
+#mission p {
+    padding: 0 4rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 0 0 2.2rem;
+}
+
+#mission li {
+    float: none;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    list-style-type: disc;
+    margin-bottom: 1rem;
+}
+
+#mission ul {
+    margin: 0 0 2.2rem;
+    padding: 0 4rem 0 6.5rem;
+}
+
+#mission #baratte-schema {
+    text-transform: uppercase;
+    color: #339933;
+}
+
+#mission img {
+    margin-left: 4rem;
+}
+
+/************************
+        FOOTER
+************************/
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: #b9b9b9;
+    margin: 3.5rem 0 2rem;
+}
